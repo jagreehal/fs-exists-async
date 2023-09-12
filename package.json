@@ -1,7 +1,7 @@
 {
   "name": "fs-exists-async",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@8.7.0",
   "description": "A simple lightweight zero-dependency asynchronous utility function to check the existence of files and directories using Node.js' fs.promises.",
   "author": "Jag Reehal<jag@jagreehal.com>",
@@ -12,7 +12,14 @@
     "url": "git+https://github.com/jagreehal/fs-exists-async.git"
   },
   "bugs": "https://github.com/jagreehal/fs-exists-async/issues",
-  "keywords": ["fs", "file", "directory", "exists", "async", "utility"],
+  "keywords": [
+    "fs",
+    "file",
+    "directory",
+    "exists",
+    "async",
+    "utility"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
