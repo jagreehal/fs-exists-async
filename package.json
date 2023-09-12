@@ -1,0 +1,73 @@
+{
+  "name": "fs-exists-async",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.7.0",
+  "description": "A simple lightweight zero-dependency asynchronous utility function to check the existence of files and directories using Node.js' fs.promises.",
+  "author": "Jag Reehal<jag@jagreehal.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/jagreehal/fs-exists-async#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagreehal/fs-exists-async.git"
+  },
+  "bugs": "https://github.com/jagreehal/fs-exists-async/issues",
+  "keywords": ["fs", "file", "directory", "exists", "async", "utility"],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.41.2",
+    "@antfu/ni": "^0.21.8",
+    "@antfu/utils": "^0.7.6",
+    "@types/node": "^20.6.0",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.49.0",
+    "esno": "^0.17.0",
+    "lint-staged": "^14.0.1",
+    "pnpm": "^8.7.5",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.1",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
