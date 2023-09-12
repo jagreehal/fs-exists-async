@@ -24,7 +24,7 @@ jobs:
           node-version: 18.x
 
       - name: Setup
-        run: npm i -g @jagreehal/ni
+        run: npm i -g @antfu/ni
 
       - name: Install
         run: nci
@@ -46,7 +46,7 @@ jobs:
           node-version: 18.x
 
       - name: Setup
-        run: npm i -g @jagreehal/ni
+        run: npm i -g @antfu/ni
 
       - name: Install
         run: nci
@@ -75,7 +75,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Setup
-        run: npm i -g @jagreehal/ni
+        run: npm i -g @antfu/ni
 
       - name: Install
         run: nci
